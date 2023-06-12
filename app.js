@@ -9,7 +9,7 @@ app.use(morgan('dev'));
 
 const PORT = process.env.PORT || 3000;
 
-app.get('/trigger', async (req, res) => {
+const trigger = async (req, res) => {
     const url = 'https://api.github.com/repos/flockflair-dbit/acm-website/dispatches';
     const headers = {
         Accept: 'application/vnd.github+json',
@@ -17,6 +17,12 @@ app.get('/trigger', async (req, res) => {
     };
     const response = await axios({ url: url, method: 'POST', data: { event_type: 'webhook' }, headers: headers });
     return res.status(200).json({ headers: response.headers, data: response.data, status: response.status });
-})
+
+}
+
+// To test
+app.get('/trigger', trigger)
+
+app.post('/trigger', trigger)
 
 app.listen(PORT, () => console.log(`Server Listening on port ${PORT}`));
