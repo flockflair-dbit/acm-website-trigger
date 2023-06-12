@@ -1,0 +1,28 @@
+{
+  "name": "acm-website-trigger",
+  "version": "1.0.0",
+  "description": "Enpoint to trigger website deploys",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flockflair-dbit/acm-website-trigger.git"
+  },
+  "author": "sd8capricon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flockflair-dbit/acm-website-trigger/issues"
+  },
+  "homepage": "https://github.com/flockflair-dbit/acm-website-trigger#readme",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
